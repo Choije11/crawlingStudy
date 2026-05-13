@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>크롤링 연습용 테크 스토어</title>
+    <!-- CSS 파일 연결 -->
+    <link rel="stylesheet" href="style.css">
+    <!-- 아이콘 폰트 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- 헤더: 사이트명과 검색창 -->
+    <header>
+        <div class="container">
+            <h1 class="logo">TECH<span>LAB</span></h1>
+            <form id="search-form" class="search-bar">
+                <input type="search" name="keyword" placeholder="상품명을 입력하세요">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
+        </div>
+    </header>
+
+    <!-- 네비게이션: 메뉴 -->
+    <nav class="main-nav">
+        <div class="container">
+            <ul>
+                <li><a href="#" class="nav-item">전체보기</a></li>
+                <li><a href="#" class="nav-item">노트북</a></li>
+                <li><a href="#" class="nav-item">스마트폰</a></li>
+                <li><a href="#" class="nav-item">태블릿</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 컨텐츠 영역 -->
+    <main class="container">
+        <!-- 사이드바: 크롤링 시 필터 정보 추출 연습용 -->
+        <aside class="sidebar">
+            <section class="filter-group">
+                <h3>카테고리</h3>
+                <ul class="filter-list">
+                    <li><label><input type="checkbox"> 삼성전자 <span>(15)</span></label></li>
+                    <li><label><input type="checkbox"> 애플 <span>(12)</span></label></li>
+                    <li><label><input type="checkbox"> LG전자 <span>(8)</span></label></li>
+                </ul>
+            </section>
+        </aside>
+
+        <!-- 상품 리스트 영역 -->
+        <section class="content">
+            <div class="content-header">
+                <h2 class="result-info">검색 결과 (<span id="total-count">35</span>)</h2>
+                <div class="sort-options">
+                    <select id="sort-select">
+                        <option value="latest">최신순</option>
+                        <option value="low-price">낮은가격순</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="product-grid" id="product-list">
+                <!-- 상품 1 -->
+                <article class="product-card" data-product-id="2026-001">
+                    <div class="img-box">
+                        <img src="https://picsum.photos/id/1/300/250" alt="상품이미지">
+                        <span class="badge sale">SALE</span>
+                    </div>
+                    <div class="info-box">
+                        <p class="brand">Samsung</p>
+                        <h3 class="product-name">
+                            <a href="javascript:void(0);">갤럭시 북4 울트라 NT960XGL-X92A</a>
+                        </h3>
+                        <div class="rating">
+                            <i class="fa fa-star"></i> 4.8 <span>(1,042)</span>
+                        </div>
+                        <div class="price-area">
+                            <strong class="current-price">3,250,000원</strong>
+                            <del class="old-price">3,800,000원</del>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 상품 2 -->
+                <article class="product-card" data-product-id="2026-002">
+                    <div class="img-box">
+                        <img src="https://picsum.photos/id/2/300/250" alt="상품이미지">
+                        <span class="badge hot">HOT</span>
+                    </div>
+                    <div class="info-box">
+                        <p class="brand">Apple</p>
+                        <h3 class="product-name">
+                            <a href="javascript:void(0);">MacBook Air 13 - M3 칩 256GB</a>
+                        </h3>
+                        <div class="rating">
+                            <i class="fa fa-star"></i> 4.9 <span>(856)</span>
+                        </div>
+                        <div class="price-area">
+                            <strong class="current-price">1,590,000원</strong>
+                        </div>
+                    </div>
+                </article>
+                <!-- 연습 시 상품 카드를 여러 개 복사해서 붙여넣으세요 -->
+            </div>
+
+            <!-- 페이지네이션 -->
+            <nav class="pagination-wrapper">
+                <ul class="pagination" id="pagination">
+                    <li><a href="javascript:void(0);" class="page-link active" data-page="1">1</a></li>
+                    <li><a href="javascript:void(0);" class="page-link" data-page="2">2</a></li>
+                    <li><a href="javascript:void(0);" class="page-link" data-page="3">3</a></li>
+                    <li><a href="javascript:void(0);" class="page-link" data-page="4">4</a></li>
+                    <li><a href="javascript:void(0);" class="page-link" data-page="next"><i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+            </nav>
+        </section>
+    </main>
+
+    <!-- 푸터 -->
+    <footer class="main-footer">
+        <div class="container">
+            <p>본 사이트는 크롤링 학습을 위한 목적으로 제작되었습니다.</p>
+        </div>
+    </footer>
+
+    <!-- JS 파일 연결 -->
+    <script src="script.js"></script>
+</body>
+</html>
