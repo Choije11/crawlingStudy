@@ -1,0 +1,52 @@
+/* 초기화 및 기본 설정 */
+* { box-sizing: border-box; }
+body { font-family: 'Malgun Gothic', dotum, sans-serif; margin: 0; background: #f4f6f8; color: #333; line-height: 1.5; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+
+/* 헤더 & 검색 */
+header { background: #fff; padding: 25px 0; border-bottom: 2px solid #333; }
+header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: 900; margin: 0; color: #111; }
+.logo span { color: #eb2f06; }
+.search-bar { display: flex; flex: 0 1 400px; border: 2px solid #333; border-radius: 5px; overflow: hidden; }
+.search-bar input { flex: 1; border: none; padding: 10px 15px; outline: none; }
+.search-bar button { background: #333; color: #fff; border: none; padding: 0 20px; cursor: pointer; }
+
+/* 네비게이션 */
+.main-nav { background: #fff; border-bottom: 1px solid #ddd; }
+.main-nav ul { list-style: none; padding: 0; margin: 0; display: flex; }
+.main-nav a { display: block; padding: 15px 25px; text-decoration: none; color: #444; font-weight: bold; }
+.main-nav a:hover { color: #eb2f06; }
+
+/* 레이아웃 구조 */
+main { display: flex; gap: 30px; margin: 30px auto; }
+.sidebar { flex: 0 0 220px; }
+.content { flex: 1; }
+
+/* 상품 카드 디자인 */
+.content-header { display: flex; justify-content: space-between; margin-bottom: 20px; align-items: center; }
+.product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+.product-card { background: #fff; border: 1px solid #e1e4e8; border-radius: 8px; overflow: hidden; transition: 0.2s; }
+.product-card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+.img-box { position: relative; background: #eee; height: 200px; }
+.img-box img { width: 100%; height: 100%; object-fit: cover; }
+.badge { position: absolute; top: 10px; left: 10px; padding: 3px 8px; font-size: 11px; font-weight: bold; color: #fff; border-radius: 3px; }
+.badge.sale { background: #eb2f06; }
+.badge.hot { background: #f39c12; }
+.info-box { padding: 15px; }
+.brand { font-size: 12px; color: #999; margin: 0; }
+.product-name { font-size: 15px; margin: 8px 0; height: 42px; overflow: hidden; }
+.product-name a { text-decoration: none; color: #111; }
+.rating { font-size: 13px; color: #f1c40f; margin-bottom: 10px; }
+.rating span { color: #999; margin-left: 5px; }
+.current-price { display: block; font-size: 18px; color: #eb2f06; }
+.old-price { font-size: 13px; color: #aaa; text-decoration: line-through; }
+
+/* 페이지네이션 (위로 튀지 않게 설정됨) */
+.pagination-wrapper { margin-top: 50px; display: flex; justify-content: center; }
+.pagination { list-style: none; display: flex; gap: 5px; padding: 0; }
+.page-link { display: block; min-width: 40px; height: 40px; line-height: 40px; text-align: center; border: 1px solid #ddd; background: #fff; text-decoration: none; color: #333; border-radius: 4px; }
+.page-link.active, .page-link:hover { background: #333; color: #fff; border-color: #333; }
+
+/* 푸터 */
+.main-footer { background: #333; color: #888; padding: 40px 0; text-align: center; margin-top: 50px; }
